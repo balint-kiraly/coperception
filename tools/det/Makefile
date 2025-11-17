@@ -1,15 +1,17 @@
 # Path to the original V2X-Sim dataset
-original_data_path := /scratch/dm4524/data/V2X-Sim-2
+#original_data_path := /scratch/dm4524/data/V2X-Sim-2
+original_data_path := ~/balintkiraly/data/V2X-Sim-2
 # Where to save the created data
-create_data_save_path := /scratch/dm4524/data/V2X-Sim-det
+#create_data_save_path := /scratch/dm4524/data/V2X-Sim-det
+create_data_save_path := ./created_data/V2X-Sim-det
 # Index of the begining scene
 scene_begin := 0
  # Index of the ending scene + 1
-scene_end := 100
+scene_end := 5 # 100
 # Index of the start agent
 from_agent := 0
 # Index of the end agent + 1
-to_agent := 6
+to_agent := 6 # 6
 # [v2.0 / v2.0-mini]
 dataset_version := v2.0
 
@@ -19,9 +21,9 @@ training_data := $(create_data_save_path)/train
 
 testing_script := test_codet.py
 # Path to the test/val data
-testing_data := $(create_data_save_path)/test
+testing_data := $(create_data_save_path)/val
 # [lowerbound / upperbound / v2v / disco / when2com / max / mean / sum / agent]
-com := lowerbound
+com := disco
 batch_size := 4
 # Where to store the logs
 logpath := logs
@@ -34,7 +36,7 @@ compress_level := 0
 # 1: apply late fusion. 0: no late fusion
 apply_late_fusion := 0
 # 1: do visualizaton. 0: no visualization
-visualization := 0
+visualization := 1
 # pose_noise in meters
 pose_noise := 0
 # only apply v2i communication

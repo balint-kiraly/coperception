@@ -1,6 +1,6 @@
 from multiprocessing import Pool
 import numpy as np
-from mmcv.utils import print_log
+from mmengine import print_log
 from terminaltables import AsciiTable
 from coperception.utils.postprocess import *
 
